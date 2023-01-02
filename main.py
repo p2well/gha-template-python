@@ -15,7 +15,9 @@ def main():
 
     print(f'Hello, {who_to_greet}')
 
-    print(f'time={current_time} >> $GITHUB_OUTPUT')
+    with open(os.environ['GITHUB_OUTPUT'], 'a',
+              encoding="utf-8") as env_file:
+        print(f'CURRENT_TIME={current_time}', file=env_file)
 
 
 if __name__ == '__main__':
