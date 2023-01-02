@@ -15,7 +15,7 @@ def main():
 
     print(f'Hello, {who_to_greet}')
 
-    print(f'::set-output name=time::{current_time}')
+    print(f'"time={current_time}" >> $GITHUB_OUTPUT')
 
 
 if __name__ == '__main__':
